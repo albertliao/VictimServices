@@ -1,0 +1,69 @@
+<h1>Victim Services</h1>
+
+<div class="main-container">
+	<div class="small-12 large-2 columns sidebar">
+  <%= form_tag("/victim", method: "get") do %>
+    <%= label_tag(:zip, "Current Zip Code: "+@zip) %>
+    <%= text_field_tag(:zip, nil, maxlength:5, placeholder:'Enter Zipcode') %>
+    <%= hidden_field_tag(:query, params[:query]) %>
+    <%= submit_tag('Update Zip', class:'button') %>
+  <% end %>
+  <dl class="accordion" data-accordion>
+    <dd class="accordion-navigation">
+      <a href="#panel1">Departments</a>
+      <div id="panel1" class="content active">
+        <ul class="side-nav">
+          <li><%= link_to "Police Departments", victim_index_path(:query => "police", :zip => @zip)%></li>
+          <li><%= link_to "Fire Departments", victim_index_path(:query => "fire", :zip => @zip)%></li>
+          <li><%= link_to "Sheriff Departments", victim_index_path(:query => "sheriff", :zip => @zip)%></li>
+        </ul>
+      </div>
+    </dd>
+    <dd class="accordion-navigation">
+      <a href="#panel2">Accordion 2</a>
+      <div id="panel2" class="content">
+        <ul class="side-nav">
+          <li><a href="#">Link 1</a></li>
+          <li><a href="#">Link 2</a></li>
+          <li><a href="#">Link 3</a></li>
+          <li><a href="#">Link 4</a></li>
+        </ul>
+      </div>
+    </dd>
+    <dd class="accordion-navigation">
+      <a href="#panel3">Accordion 3</a>
+      <div id="panel3" class="content">
+        <ul class="side-nav">
+          <li><a href="#">Link 1</a></li>
+          <li><a href="#">Link 2</a></li>
+          <li><a href="#">Link 3</a></li>
+          <li><a href="#">Link 4</a></li>
+        </ul>
+      </div>
+    </dd>
+  </dl>
+	</div>
+
+	<div class="small-12 large-10 columns map-pane">
+    <iframe
+      width="100%"
+      height="100%"
+      frameborder="0" style="border:0"
+      src="https://www.google.com/maps/embed/v1/search?key=AIzaSyBUfQuYOJzBthvALGi9kPhRR5vdIDz_9XI&q=<%= @query+"+near+"+@zip %>">
+    </iframe>
+	</div>
+  
+  <div class="small-12 columns footer">
+    <span>
+      <strong>Crime Survivors, Inc.</strong><br>
+      Awareness * Prevention * Survival * Hopeful Healing<br>
+      Toll Free: (844) 853-HOPE<br>
+      Local: (949) 872-7895<br>
+      Fax: (775) 245-4798<br>
+      PO BOX 54552<br>
+      Irvine, CA 92619<br>
+      crimesurvivors@gmail.com<br>
+      www.crimesurvivors.org / www.surviveandthriverunwalk.org  
+    </span>
+  </div>
+</div>
