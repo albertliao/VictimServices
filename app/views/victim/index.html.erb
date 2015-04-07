@@ -10,34 +10,42 @@
   <% end %>
   <dl class="accordion" data-accordion>
     <dd class="accordion-navigation">
-      <a href="#panel1">Departments</a>
+      <a href="#panel1">Help Services</a>
       <div id="panel1" class="content active">
+        <ul class="side-nav">
+          <li><%= link_to "Victim Services", victim_index_path(:query => "Victim Services", :zip => @zip)%></li>
+          <li><%= link_to "Shelters", victim_index_path(:query => "shelters", :zip => @zip)%></li>
+          <li><%= link_to "Churches", victim_index_path(:query => "Church", :zip => @zip)%></li>
+          <li><%= link_to "Counseling", victim_index_path(:query => "Counseling", :zip => @zip)%></li>
+          <li><%= link_to "Child Abuse", victim_index_path(:query => "Child Abuse", :zip => @zip)%></li>
+          <li><%= link_to "Suicide Victim Services", victim_index_path(:query => "Suicide Services", :zip => @zip)%></li>
+          <li><%= link_to "Lawyers", victim_index_path(:query => "Lawyer", :zip => @zip)%></li>
+        </ul>
+      </div>
+    </dd>
+    <dd class="accordion-navigation">
+      <a href="#panel2">Protective Services</a>
+      <div id="panel2" class="content">
         <ul class="side-nav">
           <li><%= link_to "Police Departments", victim_index_path(:query => "police", :zip => @zip)%></li>
           <li><%= link_to "Fire Departments", victim_index_path(:query => "fire", :zip => @zip)%></li>
           <li><%= link_to "Sheriff Departments", victim_index_path(:query => "sheriff", :zip => @zip)%></li>
+          <li><%= link_to "Family Justice Center", victim_index_path(:query => "family justice center", :zip => @zip)%></li>
+          <li><%= link_to "District Attorneys Office", victim_index_path(:query => "district attorneys office", :zip => @zip)%></li>
+          <li><%= link_to "Probation Department", victim_index_path(:query => "probation dpartment", :zip => @zip)%></li>
         </ul>
       </div>
     </dd>
     <dd class="accordion-navigation">
-      <a href="#panel2">Accordion 2</a>
-      <div id="panel2" class="content">
-        <ul class="side-nav">
-          <li><a href="#">Link 1</a></li>
-          <li><a href="#">Link 2</a></li>
-          <li><a href="#">Link 3</a></li>
-          <li><a href="#">Link 4</a></li>
-        </ul>
-      </div>
-    </dd>
-    <dd class="accordion-navigation">
-      <a href="#panel3">Accordion 3</a>
+      <a href="#panel3">Other Services</a>
       <div id="panel3" class="content">
         <ul class="side-nav">
-          <li><a href="#">Link 1</a></li>
-          <li><a href="#">Link 2</a></li>
-          <li><a href="#">Link 3</a></li>
-          <li><a href="#">Link 4</a></li>
+          <li><%= link_to "Hazardous Waste", victim_index_path(:query => "Hazardous Waste", :zip => @zip)%></li>
+          <li><%= link_to "Self Defense", victim_index_path(:query => "Self Defense", :zip => @zip)%></li>
+          <li><%= link_to "Human Trafficking Services", victim_index_path(:query => "Human Trafficking", :zip => @zip)%></li>
+          <li><%= link_to "Non Profit", victim_index_path(:query => "Non Profit Organization", :zip => @zip)%></li>
+          <li><%= link_to "Funeral Burial Services", victim_index_path(:query => "Funeral Burial", :zip => @zip)%></li>
+          <li><%= link_to "Salvation Army", victim_index_path(:query => "Salvation Army", :zip => @zip)%></li>
         </ul>
       </div>
     </dd>
@@ -53,7 +61,7 @@
     </iframe>
 	</div>
   
-  <div class="small-12 columns footer">
+  <div class="small-10 columns footer">
     <span>
       <strong>Crime Survivors, Inc.</strong><br>
       Awareness * Prevention * Survival * Hopeful Healing<br>

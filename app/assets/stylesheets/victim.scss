@@ -26,6 +26,7 @@ h1 {
 .mapcanvas {
 	display: inline-block;
 	margin-left: 8%;
+	
 }
 
 #left-list {
@@ -38,8 +39,9 @@ h1 {
 	background-color: yellow;
 	color: black;
 	border: 3px solid black;
-	width: 50%;
+	width: 100%;
 	font-weight: bold;
+
 }
 
 .button-font-color {
@@ -57,9 +59,12 @@ h1 {
 }
 
 .sidebar {
-	background-color: gray;
+	background-color: white;
 	height: 100%;
 	padding: 0;
+	border-style: solid;
+    border-color: #006BB0 #006BB0 white #006BB0;
+
 }
 
 .map-pane {
@@ -70,6 +75,8 @@ h1 {
 
 .footer {
 	font-size: 16px;
-	background-color: black;
+	background-color: #006BB0;
 	color: white;
+	
+
 }
